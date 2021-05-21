@@ -3,16 +3,17 @@ package com.qa.helloworld;
 public class Coins {
 
 	public static void main(String []args){
-        //Enter amount given and cost as pennies. For example: £1 = 100
-		changeGiven(458, 2000);
-    }			
-     
-    public static void changeGiven(int amount, int cost) {
+        changeGiven(4.76, 20);
+    }
+    
+    public static void changeGiven(double inAmount, double inCost) {
+        int amount = (int)Math.round(inAmount*100);
+        int cost = (int)Math.round(inCost*100);
         int change = cost - amount;
         int n_50 = 0, n_20 = 0, n_10 = 0, n_5 = 0, 
         c_200 = 0, c_100 = 0, c_50 = 0, c_20 = 0, 
         c_10 = 0, c_5 = 0, c_2 = 0, c_1 = 0;
-        	System.out.println("Change due: " + change + "p");
+      
         while(change % 5000 != change) {
             change -= 5000;
             n_50 += 1;
