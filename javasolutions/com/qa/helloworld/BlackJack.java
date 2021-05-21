@@ -8,7 +8,7 @@ public class BlackJack {
 
 	public static void blackJack() {
 		int play1 = 13;
-		int play2 = 21;
+		int play2 = 23;
 
 		if (play1 >= play2 & play1 <= 21) {
 			System.out.println(play1);
